@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/omni_a20e.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/twrp_a20e.mk
 
 

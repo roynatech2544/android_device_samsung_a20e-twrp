@@ -17,7 +17,7 @@
 DEVICE_PATH := device/samsung/a20e
 
 # OTA Assert
-TARGET_OTA_ASSERT_DEVICE := a20e,a20exx
+TARGET_OTA_ASSERT_DEVICE := a20e,a20ektt
 
 # Architecture
 TARGET_ARCH := arm64
@@ -32,10 +32,6 @@ TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
-TARGET_USES_64_BIT_BINDER := true
-
-ENABLE_CPUSETS := true
-ENABLE_SCHEDBOOST := true
 
 # Build fails without this
 ALLOW_MISSING_DEPENDENCIES := true
@@ -60,7 +56,7 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 -
 # Platform
 BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := universal7884B
-TARGET_BOARD_PLATFORM_GPU := Mali-G71 MP2
+#TARGET_BOARD_PLATFORM_GPU := Mali-G71 MP2
 
 # Filesystem
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -80,24 +76,15 @@ TARGET_COPY_OUT_VENDOR := vendor
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 
-# Do not go full treble for recovery
-PRODUCT_FULL_TREBLE_OVERRIDE := false
-
-# VNDK
-BOARD_VNDK_VERSION := current
-
-# TWRP specific build flags
-RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
-RECOVERY_SDCARD_ON_DATA := true
 # Do not set up legacy properties
 TW_NO_LEGACY_PROPS := true
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 96
 TW_USE_TOOLBOX := true
-TW_Y_OFFSET := 80
-TW_H_OFFSET := -80
+#TW_Y_OFFSET := 80
+#TW_H_OFFSET := -80
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_INCLUDE_NTFS_3G := true
